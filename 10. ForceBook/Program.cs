@@ -14,7 +14,7 @@ namespace _10._ForceBook
             {
                 if (input.Contains("|"))
                 {
-                string[] cmd = input.Split(" | ");
+                string[] cmd = input.Split(" | ",StringSplitOptions.RemoveEmptyEntries);
                     if (!userSide.ContainsKey(cmd[0]))
                     {
                         userSide.Add(cmd[0], new List<string>());
@@ -26,32 +26,32 @@ namespace _10._ForceBook
                 }
                 if (input.Contains("->"))
                 {
-                string[] cmd = input.Split(" -> ");
-                        if (!userSide[cmd[1]].Contains(cmd[0]))
-                        {
-                            userSide[cmd[1]].Add(cmd[0]);
+                string[] cmd = input.Split(" -> ",StringSplitOptions.RemoveEmptyEntries);
                         Console.WriteLine($"{cmd[0]} joins the {cmd[1]} side!");
-                        }
-                        else
-                        {
                             foreach (var site in userSide)
                             {
                                 if (site.Value.Contains(cmd[0]))
                                 {
-                                    site.Value.Remove(site.Key);
+                                    site.Value.Remove(cmd[0]);
                                 }
                             }
-                            userSide[cmd[0]].Add(cmd[1]);
-                        }
+                    if (!userSide.ContainsKey(cmd[1]))
+                    {
+                        userSide.Add(cmd[1], new List<string>());
+                    }
+                            userSide[cmd[1]].Add(cmd[0]);
                     
                 }
             }
-            foreach (var site in userSide)
+            foreach (var site in userSide.OrderByDescending(x => x.Value.Count).ThenBy(x => x.Key))
             {
-                Console.WriteLine($"Side: {site.Key}, Members: {site.Value.Count}");
-                foreach (var user in site.Value.OrderBy(x => x))
+                if (site.Value.Count > 0)
                 {
-                    Console.WriteLine($"! {user}");
+                    Console.WriteLine($"Side: {site.Key}, Members: {site.Value.Count}");
+                    foreach (var user in site.Value.OrderBy(x => x))
+                    {
+                        Console.WriteLine($"! {user}");
+                    }
                 }
             }
         }
