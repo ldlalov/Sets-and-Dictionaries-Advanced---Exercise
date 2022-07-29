@@ -4,11 +4,25 @@ using System.Linq;
 
 namespace _07._The_V_Logger
 {
+    class Vloger
+    {
+        public string Name { get; set; }
+        public HashSet<string> Followers { get; set; }
+        public HashSet<string> Following { get; set; }
+        public Vloger(string name, HashSet<string> followers, HashSet<string> following)
+        {
+            this .Name = name;
+            this .Followers = followers;
+            this .Following = following;
+        }
+            
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Dictionary<string, HashSet<string>> vlogers = new Dictionary<string, HashSet<string>>();
+            //HashSet<Vloger> vlogers = new HashSet<Vloger>();
+            Dictionary<string, Vloger> vlogers = new Dictionary<string, Vloger>();
             Dictionary<string, HashSet<string>> following = new Dictionary<string, HashSet<string>>();//stores people witch the user follow;
 
             string command;
@@ -18,29 +32,29 @@ namespace _07._The_V_Logger
                 switch (cmd[1])
                 {
                     case "joined":
-                        if (!vlogers.ContainsKey(cmd[0]))
+                        Vloger vloger = new Vloger(cmd[0],new HashSet<string>(),new HashSet<string>());
+                        if (!vlogers.ContainsKey(vloger.Name))
                         {
-                            vlogers.Add(cmd[0], new HashSet<string>());
-                            following.Add(cmd[0], new HashSet<string>());
+                            vlogers.Add(vloger.Name,vloger);
                         }
                         break;
                     case "followed":
                         if (vlogers.ContainsKey(cmd[0]) && vlogers.ContainsKey(cmd[2]) && cmd[0] != cmd[2])
                         {
-                                vlogers[cmd[2]].Add(cmd[0]);
-                                following[cmd[0]].Add(cmd[2]);
+                                vlogers[cmd[2]].Followers.Add(cmd[0]);
+                                vlogers[cmd[0]].Following.Add(cmd[2]);
                         }
                         break;
                 }
             }
             Console.WriteLine($"The V-Logger has a total of {vlogers.Count} vloggers in its logs.");
             int row = 1;
-            foreach (var vloger in vlogers.OrderByDescending(x => x.Value.Count))
+            foreach (var vloger in vlogers.OrderByDescending(x => x.Value.Followers.Count).ThenBy(x => x.Value.Following.Count))
             {
-                Console.WriteLine($"{row}. {vloger.Key} : {vloger.Value.Count} followers, {following[vloger.Key].Count} following");
+                Console.WriteLine($"{row}. {vloger.Key} : {vloger.Value.Followers.Count} followers, {vloger.Value.Following.Count} following");
                 if (row == 1)
                 {
-                    foreach (var follower in vloger.Value.OrderBy(x => x))
+                    foreach (var follower in vloger.Value.Followers.OrderBy(x => x))
                     {
                         Console.WriteLine($"*  {follower}");
                     }
