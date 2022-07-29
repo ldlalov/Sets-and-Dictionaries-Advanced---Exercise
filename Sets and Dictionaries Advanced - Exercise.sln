@@ -9,13 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Sets of Elements", "02.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Periodic Table", "03. Periodic Table\03. Periodic Table.csproj", "{611509B1-6EA5-4033-B2D2-D2AD5282AB81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Even Times", "04. Even Times\04. Even Times.csproj", "{75EE1F10-358B-46B4-96C9-816B17AFC719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Even Times", "04. Even Times\04. Even Times.csproj", "{75EE1F10-358B-46B4-96C9-816B17AFC719}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Count Symbols", "05. Count Symbols\05. Count Symbols.csproj", "{67700C05-7CAA-46EC-8C99-D86CE5A6CFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Count Symbols", "05. Count Symbols\05. Count Symbols.csproj", "{67700C05-7CAA-46EC-8C99-D86CE5A6CFCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Wardrobe", "06. Wardrobe\06. Wardrobe.csproj", "{6CA11C3E-C388-4501-B863-2F10BE1CA88F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Wardrobe", "06. Wardrobe\06. Wardrobe.csproj", "{6CA11C3E-C388-4501-B863-2F10BE1CA88F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. The V-Logger", "07. The V-Logger\07. The V-Logger.csproj", "{4FBABC9B-0ED4-4537-B507-F2B396A5924C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. The V-Logger", "07. The V-Logger\07. The V-Logger.csproj", "{4FBABC9B-0ED4-4537-B507-F2B396A5924C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Ranking", "08. Ranking\08. Ranking.csproj", "{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{4FBABC9B-0ED4-4537-B507-F2B396A5924C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FBABC9B-0ED4-4537-B507-F2B396A5924C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FBABC9B-0ED4-4537-B507-F2B396A5924C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
