@@ -19,7 +19,11 @@ namespace _10._ForceBook
                     {
                         userSide.Add(cmd[0], new HashSet<string>());
                     }
+                    if (!userSide.Any(x => x.Value.Contains(cmd[1])))
+                    {
                             userSide[cmd[0]].Add(cmd[1]);
+                    }
+
                 }
                 if (input.Contains("->"))
                 {

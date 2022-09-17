@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Wardrobe", "06. Wardrob
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. The V-Logger", "07. The V-Logger\07. The V-Logger.csproj", "{4FBABC9B-0ED4-4537-B507-F2B396A5924C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Ranking", "08. Ranking\08. Ranking.csproj", "{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Ranking", "08. Ranking\08. Ranking.csproj", "{A19B9EEF-42F7-4F23-9CF5-21FBE39DC36B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. SoftUni Exam Results", "09. SoftUni Exam Results\09. SoftUni Exam Results.csproj", "{E4AE38C2-3471-4EC0-AE9F-91D82103F7FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. SoftUni Exam Results", "09. SoftUni Exam Results\09. SoftUni Exam Results.csproj", "{E4AE38C2-3471-4EC0-AE9F-91D82103F7FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. ForceBook", "10. ForceBook\10. ForceBook.csproj", "{6BFEF8B5-7D8A-4ECA-93F9-CAA35E5E79C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. ForceBook", "10. ForceBook\10. ForceBook.csproj", "{6BFEF8B5-7D8A-4ECA-93F9-CAA35E5E79C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
