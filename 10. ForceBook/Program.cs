@@ -8,7 +8,7 @@ namespace _10._ForceBook
     {
         static void Main(string[] args)
         {
-            SortedDictionary<string, List<string>> userSide = new SortedDictionary<string, List<string>>();
+            SortedDictionary<string, HashSet<string>> userSide = new SortedDictionary<string, HashSet<string>>();
             string input;
             while ((input = Console.ReadLine()) != "Lumpawaroo")
             {
@@ -17,12 +17,9 @@ namespace _10._ForceBook
                 string[] cmd = input.Split(" | ",StringSplitOptions.RemoveEmptyEntries);
                     if (!userSide.ContainsKey(cmd[0]))
                     {
-                        userSide.Add(cmd[0], new List<string>());
-                        if (!userSide[cmd[0]].Contains(cmd[1]))
-                        {
-                            userSide[cmd[0]].Add(cmd[1]);
-                        }
+                        userSide.Add(cmd[0], new HashSet<string>());
                     }
+                            userSide[cmd[0]].Add(cmd[1]);
                 }
                 if (input.Contains("->"))
                 {
@@ -37,7 +34,7 @@ namespace _10._ForceBook
                             }
                     if (!userSide.ContainsKey(cmd[1]))
                     {
-                        userSide.Add(cmd[1], new List<string>());
+                        userSide.Add(cmd[1], new HashSet<string>());
                     }
                             userSide[cmd[1]].Add(cmd[0]);
                     
