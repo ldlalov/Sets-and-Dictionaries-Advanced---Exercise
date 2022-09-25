@@ -19,27 +19,7 @@ namespace _02._Sets_of_Elements
             {
                 set2.Add(Console.ReadLine());
             }
-            int smaller = 0;
-            if (set1.Count>set2.Count)
-            {
-                foreach (var item in set2)
-                {
-                    if (set1.Contains(item))
-                    {
-                        Console.Write($"{item} ");
-                    }
-                }
-            }
-            else
-            {
-                foreach (var item in set1)
-                {
-                    if (set2.Contains(item))
-                    {
-                        Console.Write($"{item} ");
-                    }
-                }
-            }
+            Console.WriteLine(String.Join(" ", set1.Intersect(set2)));
         }
     }
 }
