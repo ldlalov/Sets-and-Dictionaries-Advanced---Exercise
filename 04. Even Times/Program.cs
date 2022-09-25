@@ -14,12 +14,9 @@ namespace _04._Even_Times
                 int number = int.Parse(Console.ReadLine());
                 if (!numbers.ContainsKey(number))
                 {
-                    numbers[number] = 1;
+                    numbers.Add(number,0);
                 }
-                else
-                {
                 numbers[number]++;
-                }
             }
             foreach (var number in numbers)
             {
